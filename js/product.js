@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     // Obtener el parámetro de la URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -85,8 +84,40 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                         <div class="desc">
                             <h4>Description</h4>
-                            <p>${product.description}</p>
+                           
                         </div>
+                        <!-- Features Section Begin -->
+                        <section class="pricing-table section">
+                            <div class="container">
+                                <div class="row">
+                                    ${product.features.map(feature => `
+                                        <div class="col-lg-4 col-md-12 col-12">
+                                            <div class="single-table">
+                                                <div class="table-head">
+                                                    <div class="icon">
+                                                        <i class="fa ${feature.icon}"></i>
+                                                    </div>
+                                                    <h4 class="title">${feature.title}</h4>
+                                                </div>
+                                                <ul class="table-list">
+                                                    ${feature.details.map(detail => `
+                                                    <li>
+                                                     ${detail.includes('no') ? '<i class="fa fa-close" style="color: white; background-color: #808080; border-radius: 50%;"></i>' : '<i class="fa fa-check custom-fa-check"></i>'}
+                                                     ${detail.replace('no', '')}
+                                                   </li>
+
+                                                    `).join('')}
+                                                </ul>
+                                                <div class="table-bottom">
+                                                    <a class="btn" href="#">Ver detalles</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Features Section End -->
                     `;
 
                     // Inicializar el plugin Etalage después de cargar el contenido dinámicamente

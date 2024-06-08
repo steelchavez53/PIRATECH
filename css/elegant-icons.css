@@ -21,6 +21,35 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+/* elegant-icons.css */
+
+/* Define las clases de los iconos */
+.icon {
+    display: inline-block;
+    font-family: 'ElegantIcons';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Define los estilos de los iconos */
+.icon-price-tags::before {
+    content: "\e001"; /* Código del icono */
+}
+
+.icon-teeth::before {
+    content: "\e002"; /* Código del icono */
+}
+
+.icon-heartbeat::before {
+    content: "\e003"; /* Código del icono */
+}
+
+/* Puedes añadir más clases e iconos aquí */
 
 /* Use the following CSS code if you want to have a class per icon */
 /*
@@ -1118,6 +1147,24 @@ you can use the generic selector below, but it's slower:
 .icon_clipboard:before {
 	content: "\e0e6";
 }
+/* Definiciones de estilo para los iconos de Elegant Icons */
+
+.icon-price-tags::before {
+    content: "\e900"; /* Código del icono para Price Tags */
+    /* Estilos adicionales, como tamaño, color, etc. */
+}
+
+.icon-teeth::before {
+    content: "\e901"; /* Código del icono para Teeth */
+    /* Estilos adicionales */
+}
+
+.icon-heartbeat::before {
+    content: "\e902"; /* Código del icono para Heartbeat */
+    /* Estilos adicionales */
+}
+
+/* Estilos para otros iconos de Elegant Icons... */
 
 
 	.glyph {

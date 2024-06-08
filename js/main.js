@@ -57,7 +57,74 @@
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
+/*------------------
+        Testimonial Slider
+    --------------------*/
+    $(".testimonial-slider").owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 2,
+        dots: false,
+        nav: true,
+        navText: ['<i class="arrow_left"></i>', '<i class="arrow_right"></i>'],
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            }
+        }
+    });
+/*------------------
+        Logo Slider
+    --------------------*/
+    $(".lc-slider").owlCarousel({
+        loop: true,
+        margin: 115,
+        items: 6,
+        dots: false,
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            480: {
+                items: 3
+            },
+            768: {
+                items: 4
+            },
+            992: {
+                items: 5
+            },
+            1200: {
+                items: 6
+            }
+        }
+    });
+      /*----------------------------------------------------*/
+  /*  Magnific Pop up js (Home Video)
+  /*----------------------------------------------------*/
+  $('#play-home-video').magnificPopup({
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false
+  });
 
+  $('.img-pop-up').magnificPopup({
+    type: 'image',
+    gallery: {
+      enabled: true
+    }
+  });
     /*------------------
         Accordin Active
     --------------------*/
