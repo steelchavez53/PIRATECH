@@ -1504,6 +1504,67 @@ ol {
 	padding-left: 10px;
 	padding-right: 15px;
 }
+.shop__sidebar__categories ul {
+    height: auto; /* Remueve la altura fija */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.shop__sidebar__categories ul li {
+    margin-right: 15px;
+    position: relative;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    color: #111;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.nav-link:hover, .dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+.dropdown-item {
+    color: #111;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #e5e5e5;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.category-link {
+    cursor: pointer;
+}
+
 
 /*---------------------
   Shop
@@ -2508,99 +2569,102 @@ ol {
 /*=========================
 	Srart service CSS
 ===========================*/
-.services .single-service{
-	margin:30px 0;
-	position:relative;
-	padding-left:70px;
-}
-.services .single-service i{
-	font-size:45px;
-	color:#1a76d1;
-	position:absolute;
-	left:0;
-	-webkit-transition:all 0.4s ease;
-	-moz-transition:all 0.4s ease;
-	transition:all 0.4s ease;
-}
-.services .single-service h4{
-	text-transform:capitalize;
-	margin-bottom:25px;
-	color:#2C2D3F;
-}
-.services .single-service h4 a{
-	color:#2C2D3F;
-	font-size:20px;
-	font-weight:600;
-}
-.services .single-service h4 a:hover{
-	color:#1A76D1;
-}
-.services .single-service p{
-	color:#868686;
-}
-/*-- Service Details --*/
-.services-details-img {
-  margin-bottom: 50px;
-}
+        .services .single-service {
+            margin: 30px 0;
+            position: relative;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .services .single-service img {
+            width: 200px; /* Tamaño considerablemente más grande */
+            height: 200px; /* Tamaño considerablemente más grande */
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .services .single-service h4 {
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            color: #2C2D3F;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .services .single-service h4 a {
+            color: #2C2D3F;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .services .single-service h4 a:hover {
+            color: #1A76D1;
+        }
+        .services .single-service p {
+            color: #868686;
+            margin: 0;
+        }
+        /*-- Service Details --*/
+        .services-details-img {
+          margin-bottom: 50px;
+        }
 
-.services-details-img img {
-  width: 100%;
-  margin-bottom: 30px;
-}
-.services-details-img h2 {
-  font-weight: 600;
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-.services-details-img P {
-  margin-bottom: 20px;
-}
-.services-details-img blockquote {
-	font-size: 15px;
-	color: #4a6f8a;
-	background-color: #1a76d1;
-	padding: 30px 75px;
-	line-height: 26px;
-	position: relative;
-	margin-bottom: 20px;
-	color: #fff;
-}
-.services-details-img blockquote i {
-  position: absolute;
-  display: inline-block;
-  top: 20px;
-  left: 38px;
-  font-size: 32px;
-}
-.service-details-inner-left {
-  background-image: url("img/signup-bg.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.service-details-inner-left img {
-  display: none;
-}
-.service-details-inner {
-  max-width: 580px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.service-details-inner h2 {
-	font-weight: 600;
-	font-size: 30px;
-	margin-bottom: 15px;
-	border-left: 3px solid #1a76d1;
-	padding-left: 15px;
-}
-.service-details-inner p {
-  margin-bottom: 15px;
-}
-.service-details-inner p:last-child {
-  margin-bottom: 0;
-}
+        .services-details-img img {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        .services-details-img h2 {
+          font-weight: 600;
+          font-size: 28px;
+          margin-bottom: 16px;
+        }
+        .services-details-img P {
+          margin-bottom: 20px;
+        }
+        .services-details-img blockquote {
+            font-size: 15px;
+            color: #4a6f8a;
+            background-color: #1a76d1;
+            padding: 30px 75px;
+            line-height: 26px;
+            position: relative;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .services-details-img blockquote i {
+          position: absolute;
+          display: inline-block;
+          top: 20px;
+          left: 38px;
+          font-size: 32px;
+        }
+        .service-details-inner-left {
+          background-image: url("img/signup-bg.jpg");
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 100%;
+        }
+        .service-details-inner-left img {
+          display: none;
+        }
+        .service-details-inner {
+          max-width: 580px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .service-details-inner h2 {
+            font-weight: 600;
+            font-size: 30px;
+            margin-bottom: 15px;
+            border-left: 3px solid #1a76d1;
+            padding-left: 15px;
+        }
+        .service-details-inner p {
+          margin-bottom: 15px;
+        }
+        .service-details-inner p:last-child {
+          margin-bottom: 0;
+        }
+
 /*=========================
 	End service CSS
 ===========================*/
@@ -2652,6 +2716,7 @@ ol {
 	padding: 10px 0;
 	text-align: left;
 	margin-top: 30px;
+	list-style-type: disc; /* Muestra el punto de lista predeterminado */
 }
 .pricing-table .table-list li {
 	position: relative;
@@ -2659,6 +2724,7 @@ ol {
 	text-transform: capitalize;
 	margin-bottom: 18px;
 	padding-right: 32px;
+	
 }
 .pricing-table .table-list li:last-child{
 	margin-bottom:0px;
@@ -2683,9 +2749,7 @@ ol {
 }
 
 /* Table Bottom */
-.pricing-table .table-bottom {
-	margin-top: 25px;
-}
+
 .pricing-table .btn {
 	padding: 12px 25px;
 	width: 100%;
@@ -2701,6 +2765,109 @@ ol {
 	font-size: 16px;
 	margin-right: 10px;
 }
+.pricing-table .single-table .more-item {
+    display: none;
+}
+
+/* General Button Styles */
+.pricing-table .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    width: 100%;
+    color: #fff;
+    background: linear-gradient(90deg, #1a76d1, #3f8efc);
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.pricing-table .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+    opacity: 0;
+    z-index: -1;
+}
+
+.pricing-table .btn:hover::before {
+    width: 400%;
+    height: 400%;
+    opacity: 1;
+}
+
+.pricing-table .btn:hover {
+    background: linear-gradient(90deg, #3f8efc, #1a76d1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.pricing-table .btn:hover::after {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+}
+
+/* See More Button Styles */
+.pricing-table .see-more {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    color: #1a76d1;
+    background: #f1f1f1;
+    border: 2px solid #1a76d1;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-table .see-more::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(26, 118, 209, 0.3), rgba(26, 118, 209, 0) 70%);
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+    opacity: 0;
+    z-index: -1;
+}
+
+.pricing-table .see-more:hover {
+    color: #fff;
+    background: #1a76d1;
+    border-color: #1a76d1;
+}
+
+.pricing-table .see-more:hover::before {
+    width: 400%;
+    height: 400%;
+    opacity: 1;
+}
+
+
 /*=============================
 	End Pricing Table CSS
 ===============================*/

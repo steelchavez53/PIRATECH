@@ -79,6 +79,31 @@
             }
         }
     });
+
+    /*---------------------------------
+       Price fro - to +
+       ------------------------*/
+       // Función para manejar el ordenamiento por precio
+       $(document).ready(function () {
+        $('#sortPrice').change(function () {
+            var sortOrder = $(this).val();
+            var products = $('#product-list').children('.product-item').toArray();
+
+            products.sort(function (a, b) {
+                var priceA = parseFloat($(a).attr('data-price'));
+                var priceB = parseFloat($(b).attr('data-price'));
+
+                if (sortOrder === 'asc') {
+                    return priceA - priceB;
+                } else {
+                    return priceB - priceA;
+                }
+            });
+
+            $('#product-list').empty().append(products);
+        });
+    });
+    
 /*------------------
         Logo Slider
     --------------------*/

@@ -78,7 +78,7 @@
                             <li><a href="./services.html">servicios</a></li>
                             <li class="active"><a href="./shop.html">Punto de Venta</a></li>
                             <li><a href="./blog.html">Blog</a></li>
-                           
+                            <li><a href="./customers.html">Clientes</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -129,41 +129,41 @@
                                     <div class="card-heading">
                                         <a data-toggle="collapse" data-target="#collapseOne">Categories</a>
                                     </div>
-                                    <div id="collapseOne" class="collapse show" >
+                                    <div id="collapseOne" class="collapse show">
                                         <div class="card-body">
                                             <div class="shop__sidebar__categories">
-                                                <ul class="nice-scroll">
-                                                    <li><a href="#" data-category="gamer">Gamer (20)</a></li>
-                                                    <li><a href="#" data-category="oficina">Oficina (20)</a></li>
-                                                    <li><a href="#" data-category="accesorios">Accesorios (20)</a></li>
-                                                    <li><a href="#" data-category="ingenieria">Ingenieria & diseño grafico (20)</a></li>
-                                                    <li><a href="#" data-category="todo-en-uno">Todo en uno (20)</a></li>
-                                                    <li><a href="#" data-category="pantallas">Pantallas (20)</a></li>
-                                                    <li><a href="#" data-category="all">All (126)</a></li>
+                                                <ul class="nice-scroll d-flex flex-wrap">
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link category-link" data-category="gamer">Gamer (20)</a>
+                                                    </li>
+                                                    <li class="nav-item dropdown">
+                                                        <a href="#" class="nav-link category-link dropdown-toggle" data-toggle="dropdown" data-category="oficina" aria-haspopup="true" aria-expanded="false">Oficina (20)</a>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#" data-category="sillas">Sillas</a>
+                                                            <a class="dropdown-item" href="#" data-category="escritorios">Escritorios</a>
+                                                            <a class="dropdown-item" href="#" data-category="accesorios-oficina">Accesorios</a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link category-link" data-category="accesorios">Accesorios (20)</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link category-link" data-category="ingenieria">Ingenieria & diseñografico (20)</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link category-link" data-category="todo-en-uno">Todo en uno (20)</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link category-link" data-category="pantallas">Pantallas (20)</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link category-link" data-category="all">All (126)</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseThree">Filter Price</a>
-                                    </div>
-                                    <div id="collapseThree" class="collapse show" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <div class="shop__sidebar__price">
-                                                <ul>
-                                                    <li><a href="#" data-price-min="0" data-price-max="50">$0.00 - $50.00</a></li>
-                                                    <li><a href="#" data-price-min="50" data-price-max="100">$50.00 - $100.00</a></li>
-                                                    <li><a href="#" data-price-min="100" data-price-max="150">$100.00 - $150.00</a></li>
-                                                    <li><a href="#" data-price-min="150" data-price-max="200">$150.00 - $200.00</a></li>
-                                                    <li><a href="#" data-price-min="200" data-price-max="250">$200.00 - $250.00</a></li>
-                                                    <li><a href="#" data-price-min="250" data-price-max="10000">250.00+</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
                             </div>
                         </div>
                     </div>
@@ -178,51 +178,17 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="shop__product__option__right">
-                                    <p>Sort by Price:</p>
-                                    <select>
-                                        <option value="">Low To High</option>
-                                        <option value="">$0 - $55</option>
-                                        <option value="">$55 - $100</option>
+                                    <p>Ordenar por precio:</p>
+                                    <select id="sortPrice" class="sorting">
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option value="asc">De menor a mayor</option>
+                                        <option value="desc">De mayor a menor</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6 product-item" data-category="todo-en-uno" data-price="67.24" >
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
-                                    <ul class="product__hover">
-                                        <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                                        <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                        <li><a href="product.html?id=1"><img src="img/icon/search.png" alt=""></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6>Todo en uno</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$67.24</h5>
-                                    <div class="product__color__select">
-                                        <label for="pc-4">
-                                            <input type="radio" id="pc-4">
-                                        </label>
-                                        <label class="active black" for="pc-5">
-                                            <input type="radio" id="pc-5">
-                                        </label>
-                                        <label class="grey" for="pc-6">
-                                            <input type="radio" id="pc-6">
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="product-list" class="row">
                         <!-- Repite esto para todos los productos, asegurándote de asignar el valor correcto a data-category -->
                         <div class="col-lg-4 col-md-6 col-sm-6 product-item" data-category="gamer" data-price="43.48">
                             <div class="product__item sale">
@@ -231,7 +197,7 @@
                                     <ul class="product__hover">
                                         <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                        <li><a href="product.html?id=2"><img src="img/icon/search.png" alt=""></a></li>
+                                        <li><a href="product.html?id=1"><img src="img/icon/search.png" alt=""></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -259,6 +225,7 @@
                                 </div>
                             </div>
                         </div>
+                    
                         <div class="col-lg-4 col-md-6 col-sm-6 product-item" data-category="oficina" data-price="60.9">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/product/product-4.jpg">
@@ -266,7 +233,7 @@
                                         <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
-                                        <li><a href="product.html?id=3"><img src="img/icon/search.png" alt=""></a></li>
+                                        <li><a href="product.html?id=2"><img src="img/icon/search.png" alt=""></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
@@ -799,6 +766,8 @@
         
             filterProducts();
         });
+        
+       
         </script>
         
         
