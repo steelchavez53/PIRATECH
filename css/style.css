@@ -2673,7 +2673,23 @@ ol {
         .service-details-inner p:last-child {
           margin-bottom: 0;
         }
-
+		@media (max-width: 768px) {
+			.single-service {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.single-service img {
+				width: 100%;
+				height: auto;
+			}
+			.service-content {
+				text-align: center;
+			}
+			.service-content h4 {
+				margin-top: 15px;
+			}
+		}
 /*=========================
 	End service CSS
 ===========================*/

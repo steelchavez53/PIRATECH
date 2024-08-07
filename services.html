@@ -95,7 +95,7 @@
                                 <img src="img/blog/blog-2.jpg" alt="General Treatment">
                                 <div>
                                     <h4><a href="service-details.html">General Treatment</a></h4>
-                                    <p> lo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.</p>
+                                    <p>lo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.</p>
                                 </div>
                             </div>
                             <!-- End Single Service -->
@@ -198,7 +198,7 @@
                                 <li class="more-item cross"><i class="fa fa-close"></i>Additional Item 2</li>
                             </ul>
                             <div class="table-bottom">
-                                <a class="btn" href="#">Book Now</a>
+                                <a class="btn book-now" href="#" data-service="Plastic Surgery" rel="nofollow">Book Now</a>
                                 <a class="see-more" href="#" onclick="toggleMore(event)" data-state="less">See More</a>
                             </div>
                         </div>
@@ -228,7 +228,7 @@
                                 <li class="more-item cross"><i class="fa fa-close"></i>Additional Item 2</li>
                             </ul>
                             <div class="table-bottom">
-                                <a class="btn" href="#">Book Now</a>
+                                <a class="btn book-now" href="#" data-service="Teeth Whitening" rel="nofollow">Book Now</a>
                                 <a class="see-more" href="#" onclick="toggleMore(event)">See More</a>
                             </div>
                         </div>
@@ -258,8 +258,8 @@
                                 <li class="more-item cross"><i class="fa fa-close"></i>Additional Item 2</li>
                             </ul>
                             <div class="table-bottom">
-                                <a class="btn" href="#">Book Now</a>
-                                <a class="see-more" href="#" onclick="toggleMore(event)" >See More</a>
+                                <a class="btn book-now" href="#" data-service="Heart Surgery" rel="nofollow">Book Now</a>
+                                <a class="see-more" href="#" onclick="toggleMore(event)">See More</a>
                             </div>
                         </div>
                     </div>
@@ -267,6 +267,20 @@
                 </div>
             </div>
         </section>
+        
+        <script>
+            document.querySelectorAll('.book-now').forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const service = button.getAttribute('data-service');
+                    const phoneNumber = '993451907'; // Reemplaza con el número de teléfono deseado
+                    const message = `I would like to book an appointment for ${service}.`;
+                    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                    window.location.href = url;
+                });
+            });
+        </script>
+        
         
         
 		<!--/ End Pricing Table -->
