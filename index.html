@@ -12,6 +12,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
     rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -26,16 +27,55 @@
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
+  <!-- Preloader HTML -->
+<!-- PRELOADER -->
+<div id="preloder">
+  <div class="particle-bg"></div>
+  <div class="glow-loader"></div>
+  <div class="loader-text">Cargando...</div>
+</div>
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloder");
+    preloader.style.transition = "opacity 0.5s ease";
+    preloader.style.opacity = "0";
+    setTimeout(() => preloader.style.display = "none", 500);
+  });
+</script>
+
+
+
+        <!-- Topbar Start -->
+<div class="container-fluid futuristic-topbar d-none d-md-block py-2">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="top-info d-flex align-items-center">
+                <i class="fas fa-map-marker-alt neon-icon me-2"></i>
+                <small class="neon-text">23 Ranking Street, New York</small>
+            </div>
+            <div class="note-wrapper">
+                <div class="neon-marquee">
+                    <span>🔮 PIRATA SIEMPRE • NUNCA RETROCEDAS, NUNCA TE RINDAS • 🔮</span>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+
+        <!-- Topbar End -->
+
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__nav__option">
-            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-            
+        <div class="canvas-close">
+            <span class="icon_close"></span>
+        </div>
+        <div class="logo">
+            <a href="./index.html">
+                <img src="img/logo_Par.png" alt="">
+            </a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="om-widget">
@@ -43,7 +83,7 @@
                 <li><i class="icon_mail_alt"></i> Aler.support@gmail.com</li>
                 <li><i class="fa fa-mobile-phone"></i> 125-711-811 <span>125-668-886</span></li>
             </ul>
-           
+            <a href="#" class="hw-btn">Submit property</a>
         </div>
         <div class="om-social">
             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -53,164 +93,164 @@
             <a href="#"><i class="fa fa-pinterest-p"></i></a>
         </div>
     </div>
-    <!-- Offcanvas Menu End -->
+    <!-- Offcanvas Menu Wrapper End -->
 
     <!-- Header Section Begin -->
-    <header class="header">
-      
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo_P.png" alt="logo_P"></a>
-                    </div>
+    <header class="header-section">
+      <div class="hs-top">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="logo">
+                    <a href="./index.html"><img src="img/logo_Par.png" alt=""></a>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li class="active"><a href="./index.html">Inicio</a></li>
+            </div>
+
+            <!-- BARRA DE BÚSQUEDA -->
+            <div class="col-lg-4 col-md-5 d-none d-md-block">
+        <form action="buscar.html" method="get" class="search-form">
+          <input type="text" name="q" class="form-control" placeholder="Buscar..." />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="ht-widget text-right">
+                    <ul>
+                        <li><i class="icon_mail_alt"></i> Aler.support@gmail.com</li>
+                    </ul>
+                    <a href="#" class="hw-btn">Submit property</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón de menú móvil -->
+        <div class="canvas-open d-lg-none">
+            <span class="icon_menu"></span>
+        </div>
+    </div>
+</div>
+
+        <div class="hs-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <nav class="nav-menu">
+                            <ul>
+                                        <li class="active"><a href="./index.html">Inicio</a></li>
                             <li><a href="./services.html">servicios</a></li>
                             <li><a href="./shop.html">Punto de Venta</a></li>
                             <li><a href="./blog.html">Blog</a></li>
                             <li><a href="./customers.html">Clientes</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+     
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="hn-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="canvas__open"><i class="fa fa-bars"></i></div>
         </div>
     </header>
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero">
-        <div class="hero__slider owl-carousel">
-            <div class="hero__items set-bg" data-setbg="img/hero/background.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-7 col-md-8">
-                            <div class="hero__text">
-                                <h6>Equipos personalizado</h6>
-                                <h2>Equipos a medida del cliente </h2>
-                                <p>Ofrecemos equipos de cómputo de alta tecnología con asesoría personalizada. 
-                                    Diseñados con un compromiso inquebrantable con la calidad. 
-                                </p>
-                                <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
-                               
-                            </div>
-                            
-                        </div>
-                        <div class="col-xl-7 col-lg-7 col-md-8">
-                        <div class="hero_img text-center">
-                            <img src="img/hero/Asesoria.jpg" alt="asesoria" >
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__items set-bg" data-setbg="img/hero/background.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-7 col-md-8">
-                            <div class="hero__text">
-                                <h6>Equipos personalizados</h6>
-                                <h2>Ensamble profesional en video </h2>
-                                <p>Ensamblamos de forma profesional tu equipo de cómputo. Cada paso es 
-                                    detallado en video para asegurar calidad y precisión. Confía en nuestra 
-                                    experiencia para obtener el mejor rendimiento. </p>
-                                <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
-                            
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-lg-7 col-md-8">
-                            <div class="hero_img">
-                                <img src="img/hero/img2.png" alt="asesoria">
-                            </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__items set-bg" data-setbg="img/hero/background.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-7 col-md-8">
-                            <div class="hero__text">
-                                <h6>Equipos personalizado</h6>
-                                <h2>Empaquetado A1 </h2>
-                                <p>Realizamos un empaquetado profesional de tu equipo de cómputo, incluyendo 
-                                    pegatinas de seguridad. Cuidamos cada detalle para garantizar que tu producto 
-                                    llegue en perfectas condiciones y seguro hasta tus manos. 
-                                </p>
-                                <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
-                               
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-lg-7 col-md-8">
-                            <div class="hero_img">
-                                <img src="img/hero/img3.png" alt="asesoria">
-                            </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__items set-bg" data-setbg="img/hero/background.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-7 col-md-8">
-                            <div class="hero__text">
-                                <h6>Equipos personalizados</h6>
-                                <h2>Envíos a nivel nacional </h2>
-                                <p>Garantizamos que tu equipo de cómputo llegue en perfectas condiciones y seguro 
-                                    a cualquier departamento de Perú, con atención meticulosa y garantía durante 
-                                    todo el viaje. </p>
-                                <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
-                            
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-lg-7 col-md-8">
-                            <div class="hero_img">
-                                <img src="img/hero/img4.png" alt="asesoria">
-                            </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   <section class="slider-main" id="sliderContainer">
+  <div id="particles-js"></div>
+
+  <div id="backgrounds">
+    <div class="background" style="background: radial-gradient(circle, #1d1d1d 0%, #111 100%);"></div>
+    <div class="background" style="background: radial-gradient(circle, #0f0c29 0%, #302b63 50%, #24243e 100%);"></div>
+    <div class="background" style="background: radial-gradient(circle, #200122 0%, #6f0000 100%);"></div>
+  </div>
+
+  <div class="containerr text-white">
+    <div class="slider-content-wrap slider-content">
+      <h2 class="heading-style-2 " id="sliderTitle" data-text="X-Comfort Pro Ergonomic Gamer Chair">X-Comfort Pro Ergonomic Gamer Chair</h2>
+      <p id="sliderDescription">Neon support for your ultimate gaming experience.</p>
+      <h3 class="heading-style-2 glitch-text" id="sliderPrice">$152.99</h3>
+    </div>
+  </div>
+
+  <div class="slider-images parallax-layer" data-depth="0.2">
+    <img class="slider-image active parallax-item" src="img/green-chair.png" alt="Green Chair"
+      data-title="X-Comfort Green Glow"
+      data-description="Perfect blend of comfort and neon cool."
+      data-price="$152.99" />
+    <img class="slider-image" src="img/blue-chair.png" alt="Blue Chair"
+      data-title="Blue Quantum Seat"
+      data-description="A deep tech-inspired blue edition."
+      data-price="$162.99" />
+    <img class="slider-image" src="img/ping-chair.png" alt="Pink Chair"
+      data-title="Pink Astro Cloud"
+      data-description="The boldest seat in the galaxy."
+      data-price="$158.49" />
+  </div>
+</section>
+<script>
+  function ajustarSliderResponsive() {
+    const slider = document.getElementById("sliderContainer");
+    if (window.innerWidth <= 991.98) {
+      slider.style.flexDirection = "column";
+    } else {
+      slider.style.flexDirection = "row";
+    }
+  }
+
+  window.addEventListener("resize", ajustarSliderResponsive);
+  window.addEventListener("DOMContentLoaded", ajustarSliderResponsive);
+</script>
+
     <!-- Hero Section End -->
    <!-- About Section Begin -->
-   <section class="about spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="about__item">
-                    <h4>Who We Are ?</h4>
-                    <p>Contextual advertising programs sometimes have strict policies that need to be adhered too.
-                    Let’s take Google as an example.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="about__item">
-                    <h4>Who We Do ?</h4>
-                    <p>In this digital generation where information can be easily obtained within seconds, business
-                    cards still have retained their importance.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="about__item">
-                    <h4>Why Choose Us</h4>
-                    <p>A two or three storey house is the ideal way to maximise the piece of earth on which our home
-                    sits, but for older or infirm people.</p>
-                </div>
-            </div>
-        </div>
+<section class="about spad" id="about">
+  <div class="container">
+    <div class="section-title text-center mb-5">
+      <h2 class="text-gradient">¿Quiénes somos?</h2>
+      <p>Tu tienda especializada en tecnología, innovación y rendimiento.</p>
     </div>
+    <div class="row text-white">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="about-card futuristic-box">
+          <div class="icon-box"><i class="fa fa-microchip"></i></div>
+          <h4>¿Qué ofrecemos?</h4>
+          <p>Vendemos computadoras listas para usar, configuradas para alto rendimiento
+             según tus necesidades.
+             Cada equipo está optimizado para estudiar, trabajar o jugar sin complicaciones</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="about-card futuristic-box">
+          <div class="icon-box"><i class="fa fa-cogs"></i></div>
+          <h4>¿Por qué elegirnos?</h4>
+          <p>Te asesoramos para elegir el equipo ideal y te acompañamos en todo el proceso
+            con fotos, videos y comunicación constante.
+            Nuestra postventa es excelente: resolvemos tus dudas incluso después de la
+            entrega</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="about-card futuristic-box">
+          <div class="icon-box"><i class="fa fa-rocket"></i></div>
+          <h4>¿Quiénes somos?
+                    </h4>
+          <p>Somos una empresa de computadoras creada para ayudarte a elegir el equipo
+            correcto.
+            Nos enfocamos en ofrecer un servicio completo con seguimiento antes y después
+             ºde la compra</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- About Section End -->
     <!-- Testimonial Section Begin -->
     <section class="testimonial">
@@ -568,6 +608,10 @@
         </div>
     </div>
     <!-- Search End -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -580,6 +624,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/particles-congi.js"></script>
 </body>
 
 </html>
